@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API Catalog - Discover and explore our collection of APIs">
+    
+    <title>API Catalog | Discover & Explore APIs</title>
+    
+    <!-- Google Fonts - Distinctive typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JavaScript for Search & Filter -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- ============================================
+         HEADER SECTION
+         Contains logo, navigation, and branding
+    ============================================ -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo and Brand -->
+            <div class="logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">API<span class="logo-accent">Catalog</span></span>
+            </div>
+            
+            <!-- Main Navigation -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Catalog</a></li>
+                    <li><a href="#" class="nav-link">Documentation</a></li>
+                    <li><a href="#" class="nav-link">Getting Started</a></li>
+                    <li><a href="#" class="nav-link">Support</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle (for responsive design) -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         Main landing area with search functionality
+    ============================================ -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Discover Deckers
+                <span class="gradient-text">API Ecosystem</span>
+            </h1>
+            <p class="hero-subtitle">
+                Explore, integrate, and build with our comprehensive collection of APIs. 
+                Find the perfect API for your next project.
+            </p>
+            
+            <!-- Search Bar (HTML structure only) -->
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">⌕</span>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search APIs by name, category, or keyword..."
+                        aria-label="Search APIs"
+                    >
+                    <button class="search-button">Search</button>
+                </div>
+                
+                <!-- Quick Filter Tags -->
+                <div class="filter-tags">
+                    <span class="filter-label">Quick filters:</span>
+                    <button class="filter-tag">All</button>
+                    <button class="filter-tag">Active</button>
+                    <button class="filter-tag">Production</button>
+                    <button class="filter-tag">REST</button>
+                    <button class="filter-tag">GraphQL</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Background Elements -->
+        <div class="hero-bg-pattern"></div>
+    </section>
+
+    <!-- ============================================
+         MAIN CONTENT - API CATALOG
+         Card-based layout displaying all APIs
+    ============================================ -->
+    <main class="catalog-section">
+        <div class="catalog-container">
+            <!-- Section Header with Stats -->
+            <div class="catalog-header">
+                <h2 class="section-title">Available APIs</h2>
+                <div class="catalog-stats">
+                    <span class="stat">
+                        <span class="stat-number">6</span> APIs
+                    </span>
+                    <span class="stat-divider">•</span>
+                    <span class="stat">
+                        <span class="stat-number">4</span> Categories
+                    </span>
+                </div>
+            </div>
+
+            <!-- API Cards Grid -->
+            <div class="api-grid">
+                
+                <!-- API Card 1 - Product -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon product">🏷️</div>
+                        <div class="card-badges">
+                            <span class="badge env-prod">Prod</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Product API</h3>
+                        <p class="api-description">
+                            Manage product catalog, attributes, pricing, and inventory 
+                            levels across all channels and regions.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v2.1.0</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">Product Team</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+                <!-- API Card 2 - Customer -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon customer">👥</div>
+                        <div class="card-badges">
+                            <span class="badge env-prod">Prod</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Customer API</h3>
+                        <p class="api-description">
+                            Access and manage customer profiles, preferences, addresses, 
+                            and loyalty program information.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v3.0.2</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">CX Team</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+                <!-- API Card 3 - Sales Order -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon sales">🛒</div>
+                        <div class="card-badges">
+                            <span class="badge env-prod">Prod</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Sales Order API</h3>
+                        <p class="api-description">
+                            Create, update, and track sales orders including line items, 
+                            discounts, taxes, and order status.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v4.2.1</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">Commerce Team</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+                <!-- API Card 4 - Fulfillment -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon fulfillment">📦</div>
+                        <div class="card-badges">
+                            <span class="badge env-prod">Prod</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Fulfillment API</h3>
+                        <p class="api-description">
+                            Manage order fulfillment, warehouse operations, shipping 
+                            labels, and delivery tracking.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v2.5.0</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">Logistics Team</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+                <!-- API Card 5 - Purchase Order -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon purchase">📋</div>
+                        <div class="card-badges">
+                            <span class="badge env-qa">QA</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Purchase Order API</h3>
+                        <p class="api-description">
+                            Create and manage purchase orders, vendor communications, 
+                            and procurement workflows.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v1.8.0</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">Supply Chain</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+                <!-- API Card 6 - Exchange Rates -->
+                <article class="api-card">
+                    <div class="card-header">
+                        <div class="api-icon exchange">💱</div>
+                        <div class="card-badges">
+                            <span class="badge env-prod">Prod</span>
+                            <span class="badge status-active">Active</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="api-name">Exchange Rates API</h3>
+                        <p class="api-description">
+                            Real-time and historical currency exchange rates for 
+                            multi-currency pricing and financial reporting.
+                        </p>
+                    </div>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Version</span>
+                            <span class="meta-value version">v1.2.0</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Owner</span>
+                            <span class="meta-value">Finance Team</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">View Documentation →</a>
+                    </div>
+                </article>
+
+            </div>
+            <!-- End API Cards Grid -->
+
+        </div>
+    </main>
+
+    <!-- ============================================
+         FOOTER SECTION
+         Copyright and additional links
+    ============================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Footer Branding -->
+                <div class="footer-brand">
+                    <span class="logo-icon">⬡</span>
+                    <span class="footer-logo-text">API<span class="logo-accent">Catalog</span></span>
+                </div>
+                
+                <!-- Footer Links -->
+                <nav class="footer-links">
+                    <a href="#">API Status</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2026 API Catalog. All rights reserved. Built with 
+                    <span class="heart">♥</span> for developers.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
