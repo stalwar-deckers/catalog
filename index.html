@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API Catalog - Discover and explore our collection of APIs">
+    <meta name="description" content="Deckers API Catalog - Discover and explore our collection of APIs">
     
-    <title>API Catalog | Discover & Explore APIs</title>
+    <title>Deckers API Catalog | Discover & Explore APIs</title>
     
     <!-- Google Fonts - Distinctive typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
             <!-- Logo and Brand -->
             <div class="logo">
                 <span class="logo-icon">⬡</span>
-                <span class="logo-text">API<span class="logo-accent">Catalog</span></span>
+                <span class="logo-text">Deckers<span class="logo-accent">API</span></span>
             </div>
             
             <!-- Main Navigation -->
@@ -60,10 +60,10 @@
             </h1>
             <p class="hero-subtitle">
                 Explore, integrate, and build with our comprehensive collection of APIs. 
-                Find the perfect API for your next project.
+                Click on any API to view detailed documentation, endpoints, and examples.
             </p>
             
-            <!-- Search Bar (HTML structure only) -->
+            <!-- Search Bar -->
             <div class="search-container">
                 <div class="search-box">
                     <span class="search-icon">⌕</span>
@@ -79,11 +79,11 @@
                 <!-- Quick Filter Tags -->
                 <div class="filter-tags">
                     <span class="filter-label">Quick filters:</span>
-                    <button class="filter-tag">All</button>
-                    <button class="filter-tag">Active</button>
-                    <button class="filter-tag">Production</button>
-                    <button class="filter-tag">REST</button>
-                    <button class="filter-tag">GraphQL</button>
+                    <button class="filter-tag" data-filter="all">All</button>
+                    <button class="filter-tag" data-filter="commerce">Commerce</button>
+                    <button class="filter-tag" data-filter="inventory">Inventory</button>
+                    <button class="filter-tag" data-filter="finance">Finance</button>
+                    <button class="filter-tag" data-filter="active">Active</button>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                 <h2 class="section-title">Available APIs</h2>
                 <div class="catalog-stats">
                     <span class="stat">
-                        <span class="stat-number">6</span> APIs
+                        <span class="stat-number">8</span> APIs
                     </span>
                     <span class="stat-divider">•</span>
                     <span class="stat">
@@ -112,200 +112,454 @@
                 </div>
             </div>
 
-            <!-- API Cards Grid -->
-            <div class="api-grid">
+            <!-- Category: Commerce APIs -->
+            <div class="api-category" data-category="commerce">
+                <h3 class="category-title">
+                    <span class="category-icon">🛒</span>
+                    Commerce APIs
+                </h3>
                 
-                <!-- API Card 1 - Product -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon product">🏷️</div>
-                        <div class="card-badges">
-                            <span class="badge env-prod">Prod</span>
-                            <span class="badge status-active">Active</span>
+                <div class="api-grid">
+                    
+                    <!-- Product API -->
+                    <article class="api-card" data-api="product-api" data-category="commerce">
+                        <div class="card-header">
+                            <div class="api-icon commerce">📦</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Product API</h3>
-                        <p class="api-description">
-                            Manage product catalog, attributes, pricing, and inventory 
-                            levels across all channels and regions.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v2.1.0</span>
+                        <div class="card-body">
+                            <h3 class="api-name">Product API</h3>
+                            <p class="api-description">
+                                Complete CRUD operations for product management. Create, read, update, 
+                                and delete products with full inventory integration.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                                <span class="method delete">DELETE</span>
+                            </div>
                         </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">Product Team</span>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v2.1.0</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
 
-                <!-- API Card 2 - Customer -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon customer">👥</div>
-                        <div class="card-badges">
-                            <span class="badge env-prod">Prod</span>
-                            <span class="badge status-active">Active</span>
+                    <!-- Sales Order API -->
+                    <article class="api-card" data-api="sales-order-api" data-category="commerce">
+                        <div class="card-header">
+                            <div class="api-icon commerce">🛍️</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Customer API</h3>
-                        <p class="api-description">
-                            Access and manage customer profiles, preferences, addresses, 
-                            and loyalty program information.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v3.0.2</span>
+                        <div class="card-body">
+                            <h3 class="api-name">Sales Order API</h3>
+                            <p class="api-description">
+                                Create, update, and retrieve sales orders. Manage order lifecycle 
+                                from creation to fulfillment with real-time status tracking.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                            </div>
                         </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">CX Team</span>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v3.0.2</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
 
-                <!-- API Card 3 - Sales Order -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon sales">🛒</div>
-                        <div class="card-badges">
-                            <span class="badge env-prod">Prod</span>
-                            <span class="badge status-active">Active</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Sales Order API</h3>
-                        <p class="api-description">
-                            Create, update, and track sales orders including line items, 
-                            discounts, taxes, and order status.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v4.2.1</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">Commerce Team</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
-
-                <!-- API Card 4 - Fulfillment -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon fulfillment">📦</div>
-                        <div class="card-badges">
-                            <span class="badge env-prod">Prod</span>
-                            <span class="badge status-active">Active</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Fulfillment API</h3>
-                        <p class="api-description">
-                            Manage order fulfillment, warehouse operations, shipping 
-                            labels, and delivery tracking.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v2.5.0</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">Logistics Team</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
-
-                <!-- API Card 5 - Purchase Order -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon purchase">📋</div>
-                        <div class="card-badges">
-                            <span class="badge env-qa">QA</span>
-                            <span class="badge status-active">Active</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Purchase Order API</h3>
-                        <p class="api-description">
-                            Create and manage purchase orders, vendor communications, 
-                            and procurement workflows.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v1.8.0</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">Supply Chain</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
-
-                <!-- API Card 6 - Exchange Rates -->
-                <article class="api-card">
-                    <div class="card-header">
-                        <div class="api-icon exchange">💱</div>
-                        <div class="card-badges">
-                            <span class="badge env-prod">Prod</span>
-                            <span class="badge status-active">Active</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="api-name">Exchange Rates API</h3>
-                        <p class="api-description">
-                            Real-time and historical currency exchange rates for 
-                            multi-currency pricing and financial reporting.
-                        </p>
-                    </div>
-                    <div class="card-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Version</span>
-                            <span class="meta-value version">v1.2.0</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Owner</span>
-                            <span class="meta-value">Finance Team</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="card-link">View Documentation →</a>
-                    </div>
-                </article>
-
+                </div>
             </div>
-            <!-- End API Cards Grid -->
+
+            <!-- Category: Inventory APIs -->
+            <div class="api-category" data-category="inventory">
+                <h3 class="category-title">
+                    <span class="category-icon">📋</span>
+                    Inventory & Supply Chain APIs
+                </h3>
+                
+                <div class="api-grid">
+                    
+                    <!-- Purchase Order API -->
+                    <article class="api-card" data-api="purchase-order-api" data-category="inventory">
+                        <div class="card-header">
+                            <div class="api-icon inventory">📝</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Purchase Order API</h3>
+                            <p class="api-description">
+                                Manage purchase orders from creation to receipt. Track vendor orders, 
+                                manage approvals, and sync with inventory systems.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                                <span class="method delete">DELETE</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v2.5.1</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">API Key</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                    <!-- Inventory API -->
+                    <article class="api-card" data-api="inventory-api" data-category="inventory">
+                        <div class="card-header">
+                            <div class="api-icon inventory">📊</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Inventory API</h3>
+                            <p class="api-description">
+                                Real-time inventory tracking across all warehouses. Check stock levels, 
+                                manage allocations, and receive low-stock alerts.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v4.0.0</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Category: Finance APIs -->
+            <div class="api-category" data-category="finance">
+                <h3 class="category-title">
+                    <span class="category-icon">💰</span>
+                    Finance APIs
+                </h3>
+                
+                <div class="api-grid">
+                    
+                    <!-- Invoice API -->
+                    <article class="api-card" data-api="invoice-api" data-category="finance">
+                        <div class="card-header">
+                            <div class="api-icon finance">🧾</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Invoice API</h3>
+                            <p class="api-description">
+                                Create and retrieve invoices. Generate invoices from orders, 
+                                manage payment status, and integrate with accounting systems.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v1.8.0</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                    <!-- Payment API -->
+                    <article class="api-card" data-api="payment-api" data-category="finance">
+                        <div class="card-header">
+                            <div class="api-icon finance">💳</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Payment API</h3>
+                            <p class="api-description">
+                                Process payments and refunds securely. Support multiple payment 
+                                methods and integrate with major payment gateways.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v3.2.1</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Category: Customer APIs -->
+            <div class="api-category" data-category="customer">
+                <h3 class="category-title">
+                    <span class="category-icon">👥</span>
+                    Customer APIs
+                </h3>
+                
+                <div class="api-grid">
+                    
+                    <!-- Customer API -->
+                    <article class="api-card" data-api="customer-api" data-category="customer">
+                        <div class="card-header">
+                            <div class="api-icon customer">👤</div>
+                            <div class="card-badges">
+                                <span class="badge env-prod">Prod</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Customer API</h3>
+                            <p class="api-description">
+                                Manage customer profiles and preferences. Create, update, and 
+                                retrieve customer data with full address and contact support.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                                <span class="method put">PUT</span>
+                                <span class="method delete">DELETE</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v2.3.0</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">OAuth 2.0</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                    <!-- Shipping API -->
+                    <article class="api-card" data-api="shipping-api" data-category="customer">
+                        <div class="card-header">
+                            <div class="api-icon customer">🚚</div>
+                            <div class="card-badges">
+                                <span class="badge env-qa">QA</span>
+                                <span class="badge status-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="api-name">Shipping API</h3>
+                            <p class="api-description">
+                                Calculate shipping rates and track deliveries. Integrate with 
+                                multiple carriers for real-time tracking and label generation.
+                            </p>
+                            <div class="api-methods">
+                                <span class="method get">GET</span>
+                                <span class="method post">POST</span>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Version</span>
+                                <span class="meta-value version">v1.2.0-beta</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Auth</span>
+                                <span class="meta-value">API Key</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">View Documentation →</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
 
         </div>
     </main>
+
+    <!-- ============================================
+         API DOCUMENTATION MODAL
+         Detailed documentation viewer
+    ============================================ -->
+    <div class="modal-overlay" id="apiModal">
+        <div class="modal-container">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <span class="modal-icon" id="modalIcon">📦</span>
+                    <div>
+                        <h2 class="modal-title" id="modalTitle">Product API</h2>
+                        <span class="modal-version" id="modalVersion">v2.1.0</span>
+                    </div>
+                </div>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+            </div>
+            
+            <!-- Modal Navigation Tabs -->
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="overview">Overview</button>
+                <button class="modal-tab" data-tab="endpoints">Endpoints</button>
+                <button class="modal-tab" data-tab="examples">Examples</button>
+                <button class="modal-tab" data-tab="errors">Error Codes</button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="modal-content">
+                
+                <!-- Overview Tab -->
+                <div class="tab-content active" id="tab-overview">
+                    <div class="doc-section">
+                        <h3>Description</h3>
+                        <p id="modalDescription">API description will appear here.</p>
+                    </div>
+                    
+                    <div class="doc-grid">
+                        <div class="doc-card">
+                            <h4>Base URL</h4>
+                            <code class="code-block" id="modalBaseUrl">https://api.deckers.com/v2</code>
+                        </div>
+                        <div class="doc-card">
+                            <h4>Authentication</h4>
+                            <p id="modalAuth">OAuth 2.0</p>
+                            <p class="doc-note" id="modalAuthNote">Bearer token required in Authorization header</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4>Rate Limiting</h4>
+                            <p id="modalRateLimit">1000 requests/minute</p>
+                            <p class="doc-note">Per API key</p>
+                        </div>
+                        <div class="doc-card">
+                            <h4>Response Format</h4>
+                            <p>JSON</p>
+                            <p class="doc-note">UTF-8 encoded</p>
+                        </div>
+                    </div>
+                    
+                    <div class="doc-section">
+                        <h3>Supported Methods</h3>
+                        <div class="methods-list" id="modalMethods">
+                            <!-- Methods will be populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="doc-section">
+                        <h3>Usage Notes</h3>
+                        <ul class="notes-list" id="modalNotes">
+                            <!-- Notes will be populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Endpoints Tab -->
+                <div class="tab-content" id="tab-endpoints">
+                    <div class="endpoints-list" id="modalEndpoints">
+                        <!-- Endpoints will be populated by JS -->
+                    </div>
+                </div>
+                
+                <!-- Examples Tab -->
+                <div class="tab-content" id="tab-examples">
+                    <div class="examples-container" id="modalExamples">
+                        <!-- Examples will be populated by JS -->
+                    </div>
+                </div>
+                
+                <!-- Error Codes Tab -->
+                <div class="tab-content" id="tab-errors">
+                    <div class="errors-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Status</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modalErrors">
+                                <!-- Error codes will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================
          FOOTER SECTION
@@ -317,7 +571,7 @@
                 <!-- Footer Branding -->
                 <div class="footer-brand">
                     <span class="logo-icon">⬡</span>
-                    <span class="footer-logo-text">API<span class="logo-accent">Catalog</span></span>
+                    <span class="footer-logo-text">Deckers<span class="logo-accent">API</span></span>
                 </div>
                 
                 <!-- Footer Links -->
@@ -332,7 +586,7 @@
             <!-- Copyright -->
             <div class="footer-bottom">
                 <p class="copyright">
-                    © 2026 API Catalog. All rights reserved. Built with 
+                    © 2026 Deckers Brands. All rights reserved. Built with 
                     <span class="heart">♥</span> for developers.
                 </p>
             </div>
@@ -341,4 +595,3 @@
 
 </body>
 </html>
-
